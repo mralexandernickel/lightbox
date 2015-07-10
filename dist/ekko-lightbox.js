@@ -86,10 +86,10 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
               event.preventDefault();
               return _this.navigate_right();
             });
-            this.lightbox_container.on("swipeLeft", function() {
+            this.lightbox_container.on("swipeleft", function() {
               return _this.navigate_left();
             });
-            this.lightbox_container.on("swipeRight", function() {
+            this.lightbox_container.on("swiperight", function() {
               return _this.navigate_right();
             });
           }
