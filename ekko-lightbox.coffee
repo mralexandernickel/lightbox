@@ -89,8 +89,11 @@ EkkoLightbox.prototype = {
 						event.preventDefault()
 						do @navigate_left
 					@lightbox_container.find('a'+@strip_spaces(@options.right_arrow_class)).on 'click', (event) =>
-						event.preventDefault()
-						do @navigate_right
+            event.preventDefault()
+            do @navigate_right
+          # also listen on swipes if available
+          @lightbox_container.on "swipeLeft", => do @navigate_left
+          @lightbox_container.on "swipeRight", => do @navigate_right
 
 			if @options.type
 				if @options.type == 'image'

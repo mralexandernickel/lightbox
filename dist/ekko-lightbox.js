@@ -86,6 +86,12 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
               event.preventDefault();
               return _this.navigate_right();
             });
+            this.lightbox_container.on("swipeLeft", function() {
+              return _this.navigate_left();
+            });
+            this.lightbox_container.on("swipeRight", function() {
+              return _this.navigate_right();
+            });
           }
         }
         if (this.options.type) {
